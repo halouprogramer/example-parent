@@ -1,15 +1,14 @@
 package com.lvlvstart.proxy;
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
-
 /**
  * @author lvlvstart
- * @description 类描述
+ * @description
+ * JDK 动态代理 和 CGlab 动态代理的区别
+ * JDK动态代理 需要实现接口
+ * CGLib 实不实现接口无所谓
  * @create 2021/5/3 9:36
  */
-public class JDKProxy {
+public class ProxyMain {
 
 
     public static void main(String[] args) {
@@ -29,6 +28,12 @@ public class JDKProxy {
 
         wangPo.love();
 
+
+
+
+        final PanLaoShi panLaoShi1 = new PanLaoShi();
+        IWangPo cglibPrody = factory.getCglibPrody(panLaoShi1);
+        cglibPrody.love();
 
 
     }
