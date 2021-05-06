@@ -5,7 +5,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 /**
- * @author lvzishu@hengbaobank.com
+ * @author halouworld
  * @description 类描述
  * @create 2021/5/6 13:20
  */

@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.annotation.Resource;
 
 /**
- * @author lvzishu@hengbaobank.com
+ * @author lvlvstart
  * @description 真正的获得 ComplexEntityFactoryBean 需要 在 name中加上 &符号
  * @create 2021/5/4 22:07
  */

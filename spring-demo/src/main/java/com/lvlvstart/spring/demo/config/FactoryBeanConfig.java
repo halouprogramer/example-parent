@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author lvzishu@hengbaobank.com
+ * @author lvlvstart
  * @description 配置使用工厂Bean
  * @create 2021/5/4 22:15
  */
