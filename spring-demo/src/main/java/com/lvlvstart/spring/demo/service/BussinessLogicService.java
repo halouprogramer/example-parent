@@ -9,5 +9,5 @@ public interface BussinessLogicService {
     /**
      * 业务流程，用于aop拦截
      */
-    public void runBussniess();
+    public String runBussniess(String name);
 }

@@ -1,8 +1,16 @@
 package com.lvlvstart.spring.demo.aop;
 
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
+import com.google.gson.Gson;
+import com.lvlvstart.spring.demo.common.Conts;
+import com.lvlvstart.spring.demo.entity.Log;
+import com.lvlvstart.spring.demo.service.LogService;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDateTime;
+import java.util.Arrays;
 
 /**
  * @author halouworld
@@ -13,6 +21,9 @@ import org.springframework.stereotype.Component;
 @Aspect //表名这是一个切面类
 public class LogAop {
 
+    @Autowired
+    private LogService logService;
+
 
     /**
      * 定义切入点
@@ -22,6 +33,37 @@ public class LogAop {
      */
     @Pointcut("execution(* com.lvlvstart.spring.demo.service.impl.*.*(..))")
     public void pointcut() {}
+
+
+    @AfterReturning(value = "pointcut()",returning = "resultValue")
+    public void afterIntertLog(JoinPoint joinPoint,Object resultValue) {
+        String clazzMothod = joinPoint.getTarget().getClass().getName()+"."+joinPoint.getSignature().getName();
+        Log log = convertToLog(joinPoint.getArgs(), resultValue, clazzMothod);
+        logService.save(log);
+    }
+
+    @AfterThrowing(value = "pointcut()",throwing = "e")
+    public void afterException(JoinPoint joinPoint,Throwable e) {
+        String clazzMothod = joinPoint.getTarget().getClass().getName()+"."+joinPoint.getSignature().getName();
+        Log log = convertToLog(joinPoint.getArgs(), e.getMessage(), clazzMothod);
+        logService.save(log);
+    }
+
+
+    private Log convertToLog(Object[] args , Object resultValue,String clazzMethod) {
+
+        Log log = new Log();
+        log.setRequestData(new Gson().toJson(args));
+        log.setClazzMethod(clazzMethod);
+        log.setRequestUrl("");
+        log.setResponseData(new Gson().toJson(resultValue));
+        log.setCreateTime(LocalDateTime.now());
+        log.setUpdateTime(LocalDateTime.now());
+        log.setStatus(Conts.STATUS_EFFECTIVE);
+
+        return log;
+
+    }
 
 
 

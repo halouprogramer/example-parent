@@ -3,6 +3,19 @@ spring:
     name: spring-demo
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/spring-demo?characterEncoding=utf8&allowMultiQueries=true
     username: root
     password: root
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.lvlvstart.spring.demo.entity
+
+#日志打印sql
+logging:
+  level:
+    com:
+      lvlvstart:
+        spring:
+          demo:
+            mapper: debug

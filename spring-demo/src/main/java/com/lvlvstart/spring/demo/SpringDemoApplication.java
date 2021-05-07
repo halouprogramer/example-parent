@@ -1,5 +1,6 @@
 package com.lvlvstart.spring.demo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @SpringBootApplication
 @EnableAspectJAutoProxy //开启AOP
+@MapperScan("com.lvlvstart.spring.demo.mapper")
 public class SpringDemoApplication {
 
     public static void main(String[] args) {

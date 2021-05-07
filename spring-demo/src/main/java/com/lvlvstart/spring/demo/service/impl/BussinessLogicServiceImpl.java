@@ -15,7 +15,9 @@ public class BussinessLogicServiceImpl implements BussinessLogicService {
 
 
 
-    public void runBussniess() {
+    public String runBussniess(String name) {
         log.info("############进入业务逻辑执行方法");
+        int i = 1/0;
+        return "返回值";
     }
 }
