@@ -19,3 +19,6 @@ logging:
         spring:
           demo:
             mapper: debug
+
+server:
+  port: 9091

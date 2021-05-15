@@ -7,3 +7,6 @@
    ComplexEntityFactoryBean 继承FactoryBean,用来辅助生成 ComplexEntity
    FactoryBeanConfig ： bean的配置类
    FactoryBeanTest : 测试类
+
+
+### AOP 功能 添加日志

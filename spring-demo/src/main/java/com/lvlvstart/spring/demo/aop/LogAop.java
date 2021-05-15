@@ -31,7 +31,7 @@ public class LogAop {
      * 访问修饰符（可以省略） 返回值  包名.包名.类名.方法名(参数)
      * .. 表示可以有多个参数也可以为空
      */
-    @Pointcut("execution(* com.lvlvstart.spring.demo.service.impl.*.*(..))")
+    @Pointcut("execution(* com.lvlvstart.spring.demo.web.*.*(..))")
     public void pointcut() {}
 
 
