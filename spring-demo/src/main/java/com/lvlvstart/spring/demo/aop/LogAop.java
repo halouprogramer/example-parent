@@ -5,12 +5,14 @@ import com.lvlvstart.spring.demo.common.Conts;
 import com.lvlvstart.spring.demo.entity.Log;
 import com.lvlvstart.spring.demo.service.LogService;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
 
 /**
  * @author halouworld
