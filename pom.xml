@@ -17,6 +17,8 @@
     <modules>
         <module>proxy</module>
         <module>spring-demo</module>
+        <module>mybatis-plus-demo</module>
+        <module>ftp-demo</module>
     </modules>
     <packaging>pom</packaging>
 
