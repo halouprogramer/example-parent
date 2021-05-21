@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  * log日志表
  * </p>
  *
- * @author lvzishu@hengdubank.com
+ * @author halouworld
  * @since 2021-05-07
  */
 @Data

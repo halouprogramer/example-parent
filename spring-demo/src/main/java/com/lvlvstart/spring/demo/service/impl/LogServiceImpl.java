@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * log日志表 服务实现类
  * </p>
  *
- * @author lvzishu@hengdubank.com
+ * @author halouworld
  * @since 2021-05-07
  */
 @Service

@@ -8,7 +8,7 @@ import com.lvlvstart.spring.demo.entity.Log;
  * log日志表 服务类
  * </p>
  *
- * @author lvzishu@hengdubank.com
+ * @author halouworld
  * @since 2021-05-07
  */
 public interface LogService extends IService<Log> {
