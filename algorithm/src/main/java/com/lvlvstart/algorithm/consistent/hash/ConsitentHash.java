@@ -1,4 +1,4 @@
-package com.lvlvstart.consistent.hash;
+package com.lvlvstart.algorithm.consistent.hash;
 
 import java.util.SortedMap;
 import java.util.TreeMap;

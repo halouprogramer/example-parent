@@ -1,4 +1,4 @@
-package com.lvlvstart.consistent.hash;
+package com.lvlvstart.algorithm.consistent.hash;
 
 /**
  * @author lvzishu@hengbaobank.com
