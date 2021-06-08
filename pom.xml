@@ -19,6 +19,7 @@
         <module>spring-demo</module>
         <module>mybatis-plus-demo</module>
         <module>ftp-demo</module>
+        <module>algorithm</module>
     </modules>
     <packaging>pom</packaging>
 
